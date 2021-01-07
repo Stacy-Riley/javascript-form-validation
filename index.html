@@ -19,6 +19,13 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
+  <!-- Font Awsome -->
+  <script src="https://kit.fontawesome.com/c834aede1d.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -27,7 +34,45 @@
     <div class="header">
       <h2>Create Account</h2>
     </div>
-    <form></form>
+    <form class="form" id="form">
+      
+      <!-- Parent Element of input tag-->
+      <div class="form-control"> 
+        <label>Username</label>
+        <input type="text" placeholder="worldtraveler21" id="username">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+      
+      <!-- Parent Element of input tag-->
+      <div class="form-control">
+        <label>Email</label>
+        <input type="email" placeholder="hello@worldtraveler.com" id="email">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+      
+      <!-- Parent Element of input tag-->
+      <div class="form-control">
+        <label>Password</label>
+        <input type="text" placeholder="Password" id="password">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+      
+      <!-- Parent Element of input tag-->
+      <div class="form-control">
+        <label>Password Check</label>
+        <input type="text" placeholder="Re-enter password" id="password2">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error message</small>
+      </div>
+      <button>Submit</button>
+    </form>
   </div>
   
 
