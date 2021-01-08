@@ -181,6 +181,7 @@ textarea {
   bottom: 0;
   left: 0;
 }
+
 /*Styling for Error-small text box*/
 .form-control.error small {
   color: #e74c3c;

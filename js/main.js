@@ -17,8 +17,8 @@ function checkInputs() {
 	//get values from the inputs - .trim() removes any spaces user enters
 	const usernameValue = username.value.trim();
 	const emailValue = email.value.trim();
-	const passwordvalue = password.value.trim();
-	const password2value = password2.value.trim();
+	const passwordValue = password.value.trim();
+	const password2Value = password2.value.trim();
 
 	if(usernameValue === ''){
 		//Run error function
@@ -38,7 +38,28 @@ function checkInputs() {
 		setSuccessFor(email);
 	}
 
+	if(passwordValue === ''){
+		//Run error function
+		setErrorFor(password, 'Password cannot be blank');
+	 /*else if(!isPassword(passwordValue)){
+		setErrorFor(password, 'Must have: 8 characters with 1 uppercase, 1 lowercase, 1 number, and 1 special character')
+	} */
+	} else { 	
+		//Run success function
+		setSuccessFor(password);
+	}
+
+	if(password2Value === ''){
+		//Run error function
+		setErrorFor(password2, 'Password cannot be blank');
+	} else if (passwordValue !== password2Value){
+		setErrorFor(password2, 'Passwords do not match');
+	} else { 	
+		//Run success function
+		setSuccessFor(password2);
+	}
 }
+
 
 function setErrorFor(input, message) {
 	const formControl = input.parentElement; // .form-control
@@ -58,13 +79,14 @@ function setSuccessFor(input){
 }
 
 function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@“]+(\.[^<>()\
-	[\]\\.,;:\s@“]+)*)|(“.+”))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]
-	{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]
-	{2,}))$/.test(email);
-	
+	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+/*
+function isPassword(password) {
+	return /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(password);
+}
+*/
 
 
 
